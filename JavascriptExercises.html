@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+<title> JavaScript </title>
+<h1> Worksheet </h1>
+
+<script type="text/javascript" src="script.js"></script>	
+</head>
+
+<body  style="height:4000px"> 
+
+
+<br> <br> <button onclick="increaseAge()"> Increase Age </button>
+<p id="incage"> </p>
+
+<div id="personObj">
+	
+Name : <input type="text" name="name" id="InputName"> </input>
+<br>
+Age : <input type="text" name="Age" id="InputAge"> </input>
+<br>
+Occupation : <input type="text" name="Occupation" id="InputOccupation"> </input>
+
+<br> <br> 
+
+<button  type ="submit" onclick="createPerson()"> Create </button>
+
+<p id-"personObj"> </p>
+
+
+</div>
+
+
+
+<div id ="caps">
+
+He Said 'My Name is Elliott'
+<button onclick="capitalise(caps)"> CAPITALIZE </button>
+<p id="capp"> </p>
+
+ </div>
+
+<div id="cat">
+
+ <strong>"My Birthday Is On June.... <br>
+ 8 <br>
+ th"<br> </strong>
+<br>
+<button onclick="concat()"> CONCATENATE </button>
+<p id="cat"> </p>
+ </div>
+
+
+<div id="calculate">
+<br> <br>
+<input type="number" name="value1" id="value1" required="required"> </input> 
+<input type="number" name="value2" id="value2" required="required"> </input>
+<button onclick="add()"> + </button>
+<button onclick="subtract()"> - </button>
+<button onclick="multiply()"> x </button>
+<button onclick="divide()"> ÷ </button>
+<p id="result" class="result"></p>
+<style type="text/css"> 
+.result {
+	width: 170px;
+	height: 30px;
+	border: 1px solid black;
+
+}
+
+
+</style>
+<br>
+</div>
+
+<div id ="arrays">
+
+<button onclick="printArray()"> Print Array </button>
+<p id="arrayp"> </p>
+
+<br>
+
+<button onclick="addToArray()"> Add to Array</button>
+<p id="arrayq"> </p>
+
+<br>
+
+<button onclick="removeLast()"> Remove Last Item from Array</button>
+<p id="arrayr"> </p>
+
+
+</div>
+
+
+<div>
+
+<button onclick="checkAge(person)"> Persons Age Is between 20 and 40 </button>
+<p id="checkage"> </p>
+</div>
+
+<br>
+
+<div>
+<button onclick="forLoop()"> For Loop 1 - 10 </button>
+<p id="loop1"> </p>
+</div>
+
+<div>
+<button onclick="divisibleBy2()"> Divisible By 2 </button>
+<p id="loop2"> </p>
+</div>
+
+
+<div> 
+
+<strong> Fizz Buzz </strong> <br> </br>
+<button onclick="fizzBuzz(max,DivisibleByFive,DivisibleByThree)"> Loop </button> 
+<p id="fizzbuzz"> </p>
+
+</div>
+
+<div>
+	
+Iteration Four <input type="number" name="iterfour" id="iterfour"> </input>
+<button onclick="interationFour()"> Divisible by 3 </button>
+<p id="iterationRes"> </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
