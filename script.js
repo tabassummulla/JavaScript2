@@ -427,3 +427,45 @@
 
 				document.getElementById("pattern").innerHTML = total ;
 			}
+
+
+
+
+
+
+
+		var textBox;
+		var mouseText;
+		var fontSize = 10;
+
+		function  move() {
+
+			textBox = window.document.getElementById("mouse");
+
+			mouseText = window.document.getElementById("sp");
+
+			mouseText.style.top = window.event.clientY;
+			console.log(mouseText.style.top);
+
+			mouseText.style.left = window.event.clientX;
+
+			if(event.ctrlKey) {
+
+				fontSize++;
+			} else if(event.altKey){
+				fontSize --;
+			}
+
+			mouseText.style.fontSize = fontSize;
+		}
+
+
+
+
+		function moveOut() {
+
+			if(textBox.value !="") { mouseText.innerHTML = textBox.value ;
+			}
+
+
+		}

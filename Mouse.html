@@ -1,0 +1,48 @@
+<html>
+<script>
+var T;
+var S;
+var FS=10;
+function moving(){
+
+
+		T = window.document.getElementById("textBox");
+		S=window.document.getElementById("SP");
+		S.style.top=window.event.clientY;
+		console.log(S.style.top);
+		S.style.left=window.event.clientX;
+		if (event.ctrlKey){ FS++;}
+		if (event.altKey){ FS--;}
+		S.style.fontSize=FS;
+}
+
+function mouseout(){
+
+if(T.value!="")	S.innerHTML = T.value;
+}
+</script>
+
+
+
+
+
+
+
+<body onmousemove="moving()">
+	
+<input type="text" id="textBox" value ="abc" 
+	style="position:absolute;top:50;left:50"
+	onmouseleave="mouseout()"></input>
+<span style="position:absolute;top:100;left:200" id="SP">The Shafeeq</span>
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>​
