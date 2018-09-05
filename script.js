@@ -345,48 +345,85 @@
 
 
 
-		function iterationFour() {
+		function itfour() {
+		
+		var res = "";
 
-		var inputNo = document.getElementById("iterationFour").value;
+		var inputNo = parseInt(document.getElementById("iterfour").value);
 
-		while(inputNo!== 1) {
 
-			var res ;
 
-			if(inputNo%3==0){
+			if (document.getElementById("iterfour").value == "" ){
 
- 					res = inputNo/3;
+					document.getElementById("iterfour").focus();
+						alert("Please Enter Value");
+
+				} else {
+
+				 if(inputNo%3==0){
+
+
+ 					res = "	Number can be divided by 3 , the answer is  = " + inputNo/3 ;
 
 			} else {
 
-			inputNo +=1
 
-					if (inputNo%3==0){
-						res =inputNo/3;
-					}
-				else{
+				if (inputNo == 1) {
 
-					inputNo -=1;
+					res = " Sorry Not Possible...";
+				} else{
 
-					res =inputNo/3;
 
+					var newNo = inputNo+=1;
+
+						if(newNo %3==0){
+
+
+				res = "Number cannot be divided by 3, until 1 added  " + "<br>" + "New Number is  " +newNo +  "<br>" +  "This divided by 3 is  " + newNo/3;
+		
+						
+						}
+
+						else{
+
+							newNo = inputNo-2;
+
+							res = "Number cannot be divided by 3, until - 1 " + "<br>" +"New Number is  "+  newNo + "<br>" +  "This divided by 3 is  "
+					+ newNo/3;	
+						}
 
 				}
-			}
+			
 		}
-}
+
+		}
+
+		document.getElementById("it4").innerHTML = res;
+
+		}
 
 
 
-		
-				
+
+			function tripleCount() {
+
+
+				var textInput = document.getElementById("string").value ;
+				var triple = 0;
+				var total = "";
 			
+				for(i=0; i<textInput.length; i++) {
 
+				//var check = textInput.substring(i,i+2);
 
+				if(textInput.charAt(i) == textInput.charAt(i+1) && textInput.charAt(i+1) == textInput.charAt(i+2)) {
 
-		
+							 triple= triple+1 ; 
 
+						total =  triple ;
+				}
 
+				}
 
-
-			
+				document.getElementById("pattern").innerHTML = total ;
+			}
