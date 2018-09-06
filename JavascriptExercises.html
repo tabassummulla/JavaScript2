@@ -6,22 +6,23 @@
 <head>
 
 <title> JavaScript </title>
-<h1> Worksheet </h1>
+<h1 align="center"> Worksheet... </h1>
 
 <script type="text/javascript" src="script.js"></script>	
 </head>
 
-<body  onmousemove="move()"  style="height:4000px"> 
+<body style="height:4000px"> 
 
-
-<br> <br> <button onclick="increaseAge()"> Increase Age </button>
+<br>
+<br> <button onclick="increaseAge()"> Increase Age </button>
 <p id="incage"> </p>
 
+<br>
 <div id="personObj">
 	
-Name : <input type="text" name="name" id="InputName"> </input>
+Name : <input type="text" name="name" id="InputName"> </input> <br>
 <br>
-Age : <input type="text" name="Age" id="InputAge"> </input>
+Age : <input type="text" name="Age" id="InputAge"> </input> <br>
 <br>
 Occupation : <input type="text" name="Occupation" id="InputOccupation"> </input>
 
@@ -45,18 +46,16 @@ He Said 'My Name is Elliott'
  </div>
 
 <div id="cat">
-
  <strong>"My Birthday Is On June.... <br>
  8 <br>
- th"<br> </strong>
-<br>
+ th" </strong>
 <button onclick="concat()"> CONCATENATE </button>
 <p id="cat"> </p>
  </div>
 
-
 <div id="calculate">
 <br> <br>
+<h2> CALCULATOR </h2>
 <input type="number" name="value1" id="value1" required="required"> </input> 
 <input type="number" name="value2" id="value2" required="required"> </input>
 <button onclick="add()"> + </button>
@@ -77,42 +76,52 @@ He Said 'My Name is Elliott'
 <br>
 </div>
 
-<div id ="arrays">
 
-<button onclick="printArray()"> Print Array </button>
+
+<div id ="arrays">
+<b> Print Array </b>
+<button onclick="printArray()"> Print </button>
 <p id="arrayp"> </p>
 
 <br>
-
-<button onclick="addToArray()"> Add to Array</button>
+<b> Add Item to Array </b>
+<button onclick="addToArray()"> Add </button>
 <p id="arrayq"> </p>
 
 <br>
-
-<button onclick="removeLast()"> Remove Last Item from Array</button>
+<b> Remove Last Item from Array </b>
+<button onclick="removeLast()"> Remove </button>
 <p id="arrayr"> </p>
 
 
 </div>
 
+<br>
+
 
 <div>
-
-<button onclick="checkAge(person)"> Persons Age Is between 20 and 40 </button>
+<b> Check if persons Age Is between 20 and 40: </b>
+<button onclick="checkAge(person)"> Check </button>
 <p id="checkage"> </p>
 </div>
 
 <br>
 
 <div>
+<b> For Loop : </b>
 <button onclick="forLoop()"> For Loop 1 - 10 </button>
 <p id="loop1"> </p>
 </div>
 
+<br>
+
 <div>
+<b> Print Numbers from 0-10 that are divisible by 2: </b>
 <button onclick="divisibleBy2()"> Divisible By 2 </button>
 <p id="loop2"> </p>
 </div>
+
+<br>
 
 
 <div id="fbuzz"> 
@@ -140,20 +149,44 @@ He Said 'My Name is Elliott'
 
 </div>
 
+<br>
+
+
 <div>
-
-<input type="text" name="mouse" id="mouse" value="abc" style="position: absolute;top: 50; left: 50" onmouseleave="moveOut()">	</input>
-
-<span style="position: absolute;top: 100 left:200" id="sp"> Tabassum </span>
+	
+<b> Click Here to Change Cursor: </b> <button onclick="window.location.href = 'cursor.html'"> Change Cursor </button>
 
 
 </div>
 
+<br> <br>
 
 
 
 
 
+<div id="paragraph">
+
+<input type="text" name="userInput" id="userInput"> </input>
+
+<button onclick="createParagraph()"> Create Paragraph </button>
+
+<button onclick="addTxt()"> Add Text to Paragraph </button>
+
+<button onclick="delPara()"> Delete Paragraph </button>
+
+
+</div>
+
+<br> <br>
+<div id="json">
+	
+<b> Click Here to get JSON Data : </b> <button> Get  </button>
+
+
+
+
+</div>
 
 
 </body>

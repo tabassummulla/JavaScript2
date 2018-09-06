@@ -1,5 +1,7 @@
 	
-		
+
+		document.write("<div>");
+
 		var display = "This is my JavaScript Worksheet";
 		var hi = "hello";
 
@@ -83,7 +85,7 @@
 
 		}
 
-
+		document.write("</div>");
 
 		function createPerson() {
 
@@ -429,43 +431,104 @@
 			}
 
 
+		
+
+
+			function createParagraph() {
 
 
 
 
+				var p = document.createElement("p");
 
-		var textBox;
-		var mouseText;
-		var fontSize = 10;
+				p.id = "para";
 
-		function  move() {
+				var add = document.getElementById("paragraph");
 
-			textBox = window.document.getElementById("mouse");
+				add.appendChild(p);
 
-			mouseText = window.document.getElementById("sp");
 
-			mouseText.style.top = window.event.clientY;
-			console.log(mouseText.style.top);
 
-			mouseText.style.left = window.event.clientX;
 
-			if(event.ctrlKey) {
-
-				fontSize++;
-			} else if(event.altKey){
-				fontSize --;
 			}
 
-			mouseText.style.fontSize = fontSize;
+
+			function addTxt(p) {
+
+
+
+				var txt= document.getElementById("userInput").value;
+
+				var ui = document.createTextNode(txt);
+
+
+				para.appendChild(ui);
+
+
+
+
+			}
+
+
+
+		function delPara(p) {
+		
+
+		var parent = document.getElementById("paragraph");
+		var tag = document.getElementById("para");
+		var tx = document.getElementById("p");
+		
+		parent.removeChild(tag);
+		parent.removeAttribute(tx);
+
+
 		}
 
 
+		
+
+		function getJSON() {
+
+			//declares URL from where to recieve JSON File 
+			var requestURL = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+			
+			//creates new request 
+
+			var request = new XMLHttpRequest();
+
+			//Declare type of request : GET request and file location 
+
+			request.open('GET', requestURL);
+
+			//Type of response expected from the request 
+
+			request.responseType = 'json';
 
 
-		function moveOut() {
+			//Request is sent 
 
-			if(textBox.value !="") { mouseText.innerHTML = textBox.value ;
+			request.send();
+
+			// Function which is carried out when request response recieved 
+
+			request.onload = function {
+
+					//Gets response of request and saves it as requestData
+
+					var requestData = request.response;
+
+					//turns request
+					var myjson = JSON.stringyfy(requestData, null , 7); 
+
+
+
 			}
+
+
+
+
+
+
 
 
 		}
