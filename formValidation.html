@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<h1> Form Validation </h1>
+
+
+<script type="text/javascript" src="form.js"> </script>
+
+</head>
+<body>
+
+
+
+<form>
+
+Name :  <input type="text" name="name" id="name" required="required">  *
+
+<br> 
+
+Email : <input type="Email" name="email"  id="uemail" placeholder="example@example.com"  required="required"> *
+
+<br>
+
+Mobile Number : <input type="text" name="mobile" id="mobile" pattern="/^\d{10}$/" required="required"> *
+
+<br>
+
+Date of Birth : <input type="Date" name="DOB" id="DOB" required="required"> *
+
+
+
+<button type="submit" onclick="enter();validateEmail();"> Submit </button>
+
+</form>
+
+<p id="output"> </p>
+
+
+
+</body>
+
+
+
+
+
+</html>

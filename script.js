@@ -511,15 +511,89 @@
 
 			// Function which is carried out when request response recieved 
 
-			request.onload = function {
+			request.onload = function(){
 
 					//Gets response of request and saves it as requestData
 
 					var requestData = request.response;
 
-					//turns request
-					var myjson = JSON.stringyfy(requestData, null , 7); 
+					//turns json object (javascript object) into string 
 
+					var myjson = JSON.stringify(requestData, null , 7); 
+
+
+					document.getElementById("json1").innerHTML = "<pre>" + myjson + "</pre>";
+
+
+			}
+
+
+		}
+
+
+
+
+		var requestKings = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json";
+
+
+		function getJSON2(requestKings){
+		
+
+		var request = new XMLHttpRequest();
+
+
+		request.open('GET',requestKings);
+
+		request.responseType = 'json';
+
+		request.send();
+
+		request.onload = function() {
+
+
+			var requestData = request.response;
+
+			var json2 = JSON.stringify(requestData, null ,7);
+
+			document.getElementById("json2").innerHTML = "<pre>" + json2 + "</pre>";
+
+
+
+		}
+		
+
+		}
+
+
+
+
+
+
+		function search(requestKings) {
+
+
+			var request = new XMLHttpRequest();
+
+			request.open('GET',requestKings);
+
+			request.responseType = 'json';
+
+			request.send();
+
+			request.onload = function () {
+
+
+			var requestData = request.response;
+
+			var searchValue = document.getElementById("kings").value; 
+
+			var result = [];
+
+			//adds data to result array and filter function carrys out filter for each object in array
+
+			result.push(requestData.filter(a => Object.values(a).includes(searchValue)));
+
+			document.getElementById("searchResults").innerHTML = "<pre>" + JSON.stringify(result,null,7) + "</pre>";
 
 
 			}
@@ -527,8 +601,14 @@
 
 
 
+		
+
 
 
 
 
 		}
+		
+
+
+

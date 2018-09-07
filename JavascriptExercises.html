@@ -6,12 +6,27 @@
 <head>
 
 <title> JavaScript </title>
+
+
 <h1 align="center"> Worksheet... </h1>
+
+<div align="center">
+<ul>
+<button style="width: 100px; height: 40px;" onclick="window.location.href ='formValidation.html' ">  Form Validation </button> 
+
+<button  style="width: 100px; height: 40px;" onclick="window.location.href = 'cursor.html'"> Change Cursor </button>
+</ul>
+</div>
+
 
 <script type="text/javascript" src="script.js"></script>	
 </head>
 
 <body style="height:4000px"> 
+
+<div id ="nav">
+
+
 
 <br>
 <br> <button onclick="increaseAge()"> Increase Age </button>
@@ -126,7 +141,7 @@ He Said 'My Name is Elliott'
 
 <div id="fbuzz"> 
 
-<strong> Fizz Buzz </strong> <br> </br>
+<strong> Fizz Buzz </strong> 
 <button onclick="fizzBuzz(max,DivisibleByFive,DivisibleByThree)"> Loop </button> 
 <p id="fizzbuzz"> </p>
 
@@ -149,20 +164,7 @@ He Said 'My Name is Elliott'
 
 </div>
 
-<br>
-
-
-<div>
-	
-<b> Click Here to Change Cursor: </b> <button onclick="window.location.href = 'cursor.html'"> Change Cursor </button>
-
-
-</div>
-
-<br> <br>
-
-
-
+<br> 
 
 
 <div id="paragraph">
@@ -181,11 +183,17 @@ He Said 'My Name is Elliott'
 <br> <br>
 <div id="json">
 	
-<b> Click Here to get JSON Data : </b> <button> Get  </button>
+<b> Click Here to get JSON Data : </b> <button onclick="getJSON()"> Get  </button>
+<p id="json1"> </p>
+ 
+
+ <b> Click Here to get JSON Data :  </b> <button onclick="getJSON2(requestKings)"> Get </button>
+ <p id="json2"></p>
 
 
-
-
+ <b> Search Kings :  </b> <input type="text" name="kings" id="kings"> </input>
+<button onclick="search(requestKings)"> Search </button>
+<p id="searchResults"> </p>
 </div>
 
 
